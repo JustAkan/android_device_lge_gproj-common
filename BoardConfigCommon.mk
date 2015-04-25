@@ -125,5 +125,3 @@ MR_INIT_DEVICES := device/lge/e980/mr_init_devices.c
 MR_DPI := xhdpi  
 MR_FSTAB := device/lge/e980/twrp/twrp.fstab  
 MR_KEXEC_MEM_MIN := 0x04000000
-MR_DEVICE_HOOKS := device/lge/e980/mr_hooks.c
-MR_DEVICE_HOOKS_VER := 3
