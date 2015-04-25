@@ -75,6 +75,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 6189744128 # 5.9G
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # TWRP
+RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 1080x1920
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -85,7 +86,11 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.175/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
-TW_INCLUDE_JB_CRYPTO := true
+TW_INCLUDE_L_CRYPTO := true
+TARGET_RECOVERY_FSTAB = device/lge/gproj-common/twrp/twrp.fstab
+
+PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/init.recovery.geefhd.rc:recovery/root/init.recovery.geefhd.rc
 
 
 BOARD_USES_SECURE_SERVICES := true
