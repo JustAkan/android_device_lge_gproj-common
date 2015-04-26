@@ -89,8 +89,8 @@ TW_NO_USB_STORAGE := true
 TW_INCLUDE_L_CRYPTO := true
 TARGET_RECOVERY_FSTAB = device/lge/gproj-common/twrp/twrp.fstab
 
-PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
-PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/init.recovery.geefhd.rc:recovery/root/init.recovery.geefhd.rc
+PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/twrp.fstab:root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/init.recovery.geefhd.rc:root/init.recovery.geefhd.rc
 
 
 BOARD_USES_SECURE_SERVICES := true
