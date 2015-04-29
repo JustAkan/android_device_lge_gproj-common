@@ -74,24 +74,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 880803840 # 840M
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 6189744128 # 5.9G
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
-# TWRP
-RECOVERY_VARIANT := twrp
-DEVICE_RESOLUTION := 1080x1920
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-BOARD_SUPPRESS_SECURE_ERASE := true
-TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.175/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 255
-TW_NO_USB_STORAGE := true
-TW_INCLUDE_L_CRYPTO := true
-TARGET_RECOVERY_FSTAB = device/lge/gproj-common/twrp/twrp.fstab
-
-PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/twrp.fstab:root/etc/twrp.fstab
-PRODUCT_COPY_FILES += device/lge/gproj-common/twrp/init.recovery.geefhd.rc:root/init.recovery.geefhd.rc
-
 
 BOARD_USES_SECURE_SERVICES := true
 
@@ -128,5 +110,5 @@ BOARD_SEPOLICY_DIRS += \
 MR_INPUT_TYPE := type_b  
 MR_INIT_DEVICES := device/lge/e980/mr_init_devices.c  
 MR_DPI := xhdpi  
-MR_FSTAB := device/lge/e980/twrp/twrp.fstab  
-MR_KEXEC_MEM_MIN := 0x04000000
+MR_FSTAB := device/lge/e980/twrp.fstab  
+MR_KEXEC_MEM_MIN := 0x89000000
