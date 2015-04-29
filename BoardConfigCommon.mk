@@ -106,9 +106,9 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         device/lge/gproj-common/sepolicy
 
-# MultiROM  
-MR_INPUT_TYPE := type_b  
-MR_INIT_DEVICES := device/lge/e980/mr_init_devices.c  
-MR_DPI := xhdpi  
-MR_FSTAB := device/lge/e980/twrp.fstab  
+# MultiROM
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/lge/e980/mr_init_devices.c
+MR_DPI := xhdpi
+MR_FSTAB := device/lge/e980/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x89000000
