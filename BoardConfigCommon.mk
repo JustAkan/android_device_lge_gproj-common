@@ -105,10 +105,6 @@ BOARD_USES_LEGACY_MMAP := true
 include device/qcom/sepolicy/sepolicy.mk
 
 # Common gproj policies
-ifneq ($(filter e980,$(TARGET_DEVICE)),)
-BOARD_SEPOLICY_DIRS += \
-        device/lge/gproj-common/sepolicye980
-else
 BOARD_SEPOLICY_DIRS += \
         device/lge/gproj-common/sepolicy
-endif
+
