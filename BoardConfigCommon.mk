@@ -100,3 +100,5 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         device/lge/gproj-common/sepolicy
 
+PRODUCT_VENDOR_KERNEL_HEADERS := device/lge/gproj-common/kernel-headers
+
