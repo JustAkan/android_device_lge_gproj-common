@@ -1,3 +1,4 @@
+typeattribute rmt_storage rmt_placeholder;
 
 allow rmt_storage self:capability sys_rawio;
 
